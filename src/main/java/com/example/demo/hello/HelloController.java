@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HelloController {
 
-	@GetMapping("/helloWorld")
+	@GetMapping("/hello-world")
 	public String getHello(Model model) {
 
         //ModelクラスのaddAttributeメソッドにキー名と値を指定
@@ -17,10 +17,10 @@ public class HelloController {
 		model.addAttribute("name", "Tom");
 
 		// helloWorld.htmlに遷移する
-		return "helloWorld";
+		return "hello-world";
 	}
 	
-	@PostMapping("/helloWorld")
+	@PostMapping("/hello-world")
 	public String postHello(@RequestParam("nameResponse") String name,Model model) {
 
 		// ModelクラスのaddAttributeメソッドにキー名と値を指定
@@ -29,6 +29,6 @@ public class HelloController {
 		model.addAttribute("nameResponse", name);
 
 		// helloResponse.htmlに遷移する
-		return "helloWorld/helloResponse";
+		return "helloworld/hello-response";
 	}
 }
