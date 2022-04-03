@@ -29,6 +29,6 @@ public class HelloController {
 		model.addAttribute("nameResponse", name);
 
 		// helloResponse.htmlに遷移する
-		return "helloWorld/hello-response";
+		return "helloworld/hello-response";
 	}
 }
